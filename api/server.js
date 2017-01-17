@@ -1,9 +1,9 @@
-const express = require('express'); // call express
-const app = express();              // define our app using express
-const bodyParser = require('body-parser');
-const cors = require('cors');
+var express = require('express'); // call express
+var app = express();              // define our app using express
+var bodyParser = require('body-parser');
+var cors = require('cors');
 
-const data = require('./data');
+var data = require('./data');
 
 // const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost:27017/local');
@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const port = process.env.PORT || 8080; // set our port
+var port = process.env.PORT || 8080; // set our port
 
 // ROUTS FOR OUR API
 // =================================================================
-const router = express.Router();    // get an instance of the express Router
+var router = express.Router();    // get an instance of the express Router
 
 // test router to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function (req, res) {
